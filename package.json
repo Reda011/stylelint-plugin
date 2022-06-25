@@ -1,0 +1,47 @@
+{
+  "name": "stylelint-plugin",
+  "version": "1.0.0",
+  "description": "stylelint 插件工程",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "前端卡卡西",
+  "license": "ISC",
+  "jest": {
+    "clearMocks": true,
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "lib/**/*.js"
+    ],
+    "coverageDirectory": "./.coverage/",
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 75,
+        "functions": 75,
+        "lines": 75,
+        "statements": 75
+      }
+    },
+    "setupFiles": [
+      "./jest-setup.js"
+    ],
+    "testEnvironment": "node",
+    "roots": [
+      "lib"
+    ],
+    "testRegex": ".*\\.test\\.js$|lib/.*/__tests__/.*\\.js$"
+  },
+  "devDependencies": {
+    "jest-preset-stylelint": "^5.0.4",
+    "postcss-selector-parser": "^6.0.10",
+    "stylelint": "^14.9.1"
+  },
+  "dependencies": {
+    "jest": "^28.1.1"
+  }
+}
